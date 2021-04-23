@@ -2,10 +2,12 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ExchangeNow from './currencyExchanger.js';
+import ExchangeNow from './currencyExchanger.j';
 
-function getNorwayElements(conversion, response){
-  if (conversion){
+function getNorwayElements(response, usAmount){
+  let foreignCurrency = response.conversion_rates.NOK
+  let conversion = (usAmount * foreignCurrency).toFixed(2);
+  if (response.conversion_rates){
     $("#showConversion").text(`${conversion}`);
   } else {
     $('#showErrors').text(`There was an error: ${response.message}`);
@@ -32,17 +34,14 @@ function getNorwayElements(conversion, response){
     // let other = $("#other")[0].selected;
     // $('#showConversion').val("");
 
-    
+    let conversion;
   
     if(norway === true){
       // countryPicked = "NOK";
       $('#showConversion').val("");
       ExchangeNow.getNorway()
       .then(function(response){
-        let x = response.conversion_rates.NOK
-        let conversion = Math.floor(usAmount * x);
-        console.log(conversion);
-        getNorwayElements(conversion, response);
+        getNorwayElements(response, usAmount);
       });
     }else if(rwanda === true){
       // countryPicked = "RWF";
