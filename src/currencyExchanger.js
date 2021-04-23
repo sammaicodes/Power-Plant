@@ -1,6 +1,6 @@
 export default class ExchangeNow{
   static getNorway(){
-    return fetch(`https://v6.exchangerate-api.com/v6/8662ad1c69de4e3302afc3c1/latest/USD`)
+    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
       .then(function(response){
         if(!response.ok){
           throw Error(response.statusText);

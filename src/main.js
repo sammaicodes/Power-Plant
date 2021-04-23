@@ -54,16 +54,18 @@ function getTanzElements(response, usAmount){
   }
 }
 function clear(){
-  $('#showConversion').val("");
-  $('#showAPIerror').val("");
-  $('#error').text("");
+  $('#showConversion').text("");
+  $('#showAPIerror').text("");
+  $('#error').hide();
+  $('#showConversion').show()
+  $('#showAPIerror').show();
 }
 
 
 
   $("#go").on("click", (event) => {
     event.preventDefault();
-    console.log("whats going on!?");
+    clear();
 
     let usAmount = parseFloat($("#us").val());
 
@@ -76,49 +78,33 @@ function clear(){
     if(norway === true){
       ExchangeNow.getNorway()
       .then(function(response){
-        clear();
         getNorwayElements(response, usAmount);
       });
     }else if(rwanda === true){
       ExchangeNow.getRwanda()
       .then(function(response){
-        clear();
         getRwandaElements(response, usAmount);
       });
     }else if(newZeland === true){
       ExchangeNow.getNewZeland()
       .then(function(response){
-        clear();
         getNZelements(response, usAmount);
       });
     }else if(mexico === true){
       ExchangeNow.getMexico()
       .then(function(response){
-        clear();
         getMexElements(response, usAmount);
       });
     }else if(tanzania === true){
       ExchangeNow.getTanzania()
       .then(function(response){
-        clear();
         getTanzElements(response, usAmount);
       });
     }else{
-      $("#error").text("Sorry, at this time we are limited to only the options listed in the dropdown menu.");  
+      $('#showConversion').hide()
+      $('#showAPIerror').hide();
+      $("#error").show(); 
     }
-    
-
-
-
-    // ExchangeNow.getNorway()
-    //   .then(function(response){
-    //     getNorwayElements(response, countryPicked);
-    //   });
-    // ExchangeNow.getRwanda()
-    //   .then(function(response){
-    //     getRwandaElements(response, countryPicked);
-    //   });
-
   });
 
 
