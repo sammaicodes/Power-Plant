@@ -1,0 +1,6 @@
+#error, #showErrors{
+  display: none;
+}
+background{
+  color: red;
+}
