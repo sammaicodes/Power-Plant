@@ -1,6 +1,12 @@
-/* #showErrors{
-  display: none;
-} */
+#showAPIerror{
+  color: red;
+  font-weight: bolder;
+}
+#error{
+  
+  color: red;
+  font-weight: bolder;
+}
 body{
 
 }
