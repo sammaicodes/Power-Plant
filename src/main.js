@@ -2,12 +2,13 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ExchangeNow from './currencyExchanger.j';
+import ExchangeNow from './currencyExchanger.js';
 
 function getNorwayElements(response, usAmount){
-  let foreignCurrency = response.conversion_rates.NOK
-  let conversion = (usAmount * foreignCurrency).toFixed(2);
-  if (response.conversion_rates){
+  
+  if (response.conversion_rate){
+    let foreignCurrency = response.conversion_rates.NOK
+    let conversion = (usAmount * foreignCurrency).toFixed(2);
     $("#showConversion").text(`${conversion}`);
   } else {
     $('#showErrors').text(`There was an error: ${response.message}`);
