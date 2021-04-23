@@ -1,6 +1,6 @@
-#error, #showErrors{
+#showErrors{
   display: none;
 }
-background{
-  color: red;
+body{
+
 }
