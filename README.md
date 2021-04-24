@@ -14,22 +14,29 @@
 * _jQuery_
 * _Bootstrap_
 * _JavaScript_
+* _Webpack_
 
 ## Description
 
 _In brief, this project shows the utilization of basic API calls & Keys._
 
-## Setup/Installation Requirements
+## Pre-requisites
 
+* _Nodejs_
+* _VS Code or another text editor of choice_
 * _Internet browser_
-* _A code editor such as VS Code._
 * _An account with GitHub_
 
-### Steps to open project:
+## Installation Instruction
 
-1. _Download this repository by selecting the green button denoting code and select download_
-2. _Open the folder_
-3. _Open the index.html folder to open it in your browser._
+* _Clone the repository with command `$ git clone gitHub-URL-repository`_
+* _Open the repository on your computer in your text editor._
+* _Add a folder named "dist" and a file named ".env" to the root directory of the project_
+* _Obtain an (either free or choose to pay) API KEY from https://app.exchangerate-api.com/_
+* _In the .env file type `API_KEY=yourAPIkeyGoesHere`_
+* _Run the command `$ npm install`_
+* _Run another command `$npm run build`_
+* _Last, run the command `$ npm run start`_
 
 ## Known Bugs
 
