@@ -18,7 +18,7 @@
 
 ## Description
 
-_In brief, this project shows the utilization of basic API calls & Keys._
+_A Project Implementing Currying, Closures, Spread, and State.- Functional Programming_
 
 ## Pre-requisites
 
