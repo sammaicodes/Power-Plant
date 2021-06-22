@@ -9,8 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'eval-source-map',
-  devServer: {               
-    contentBase: './dist'    
+  devServer: {
+    contentBase: './dist',
+    watchContentBase: true
   },
   plugins: [
     new CleanWebpackPlugin(),
