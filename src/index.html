@@ -1,47 +1,23 @@
-<!DOCTYPE html>
-<html lang="en-US">
+
+
 <head>
-  <title>Currency Exchanger</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="plant.js"></script>
+  <title>Grow Your Plant</title>
 </head>
+
 <body>
-  <div class="containter text-center">
-    <form class="exchanger">
-      <div class="form-check">
-      <br>
-      <br>
-      <br>
-      <h1>Currency Exchanger</h1>
-      <br>
-      <div>
-        <label for="us">Enter amount in US-dollars:</label>
-        <input type="text" id="us">
-      </div>
-      <br>
-      <div>
-        <label for="currencyType">Pick currency you want: </label>
-        <select id="currencyType">
-          <option id="NOK">Norway- Norwegian Krone</option>
-          <option id="RWF">Rwanda- Rwandan Franc</option>
-          <option id="NZD">New Zealand- New Zealand Dollar</option>
-          <option id="MXN">Mexico- Mexican Peso</option>
-          <option id="TZS">Tanzania- Tanzanian Shilling</option>
-          <option id="other">Other</option>
-        </select>
-      </div>
-      <br>
-      </div>
-      <button type="submit" class="btn btn-success" id="go">Convert Currency</button>
-      <br>
-      <br>
-      <div class="show">
-        <p id="showConversion"></p>
-      </div>
-      <div>
-        <p id="showAPIerror"></p>
-        <p id="error">Sorry, at this time we are limited to only the options listed in the dropdown menu.</p>
-      </div>
-      <p id="notAnumber"></p>
-    </form>
+  <div class="container">
+    <div class="grow-buttons">
+      <button class="btn-success" id="feed">Add soil</button>
+      <button class="btn-success" id="show-state">Current Stats</button>
+    </div>
+    <h1>Your Plant's Values</h1>
+    <h3>
+      <div id="soil-value">0</div>
+    </h3>
   </div>
 </body>
+
 </html>
