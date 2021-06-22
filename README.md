@@ -1,6 +1,6 @@
-# Currency Exchanger
+# Power Plant
 
-####  A Project Implementing Basic API Calls
+####  A Project Implementing 
 
 #### By _**Sammai Gutierrez**_
 
